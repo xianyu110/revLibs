@@ -33,17 +33,17 @@ def check_config():
 
 
 # 注册插件
-@register(name="revLibs", description="接入acheong08/ChatGPT等逆向库", version="0.1", author="RockChinQ")
+@register(name="revLibs", description="接入EdgeGPT逆向库", version="0.1", author="Maynor")
 class HelloPlugin(Plugin):
 
     chatbot: Chatbot = None
 
     # 插件加载时触发
     def __init__(self, plugin_host: PluginHost):
-        if not check_config():
-            logging.error("[rev] 已生成配置文件(revcfg.py)，请按照其中注释填写配置文件后重启程序")
-            plugin_host.notify_admin("[rev] 已生成配置文件(revcfg.py)，请按照其中注释填写配置文件后重启程序")
-            return
+        # if not check_config():
+        #     logging.error("[rev] 已生成配置文件(revcfg.py)，请按照其中注释填写配置文件后重启程序")
+        #     plugin_host.notify_admin("[rev] 已生成配置文件(revcfg.py)，请按照其中注释填写配置文件后重启程序")
+        #     return
 
         # 当收到个人消息时触发
         @on(PersonNormalMessageReceived)
