@@ -1,6 +1,8 @@
 # 使用acheong08/ChatGPT库的方式
 # 目前仅支持V1版本
 import asyncio
+import os
+
 from EdgeGPT import Chatbot
 
 acheong_chatgpt_version = "V1"
@@ -25,8 +27,9 @@ acheong_chatgpt_version = "V1"
 # with open('./cookie.json', 'r') as f:
 #     cookies = json.load(f)
 # bot = Chatbot(cookies=cookies)
-openai_account = Chatbot(cookiePath='cookies.json')
+openai_account = Chatbot(cookiePath='E:\Users\Administrator\PycharmProjects\revLibsMaynor\cookies.json')
 # openai_account = "cookies.json"
+
 
 # 消息回复前缀
 # 建议保留此前缀，以便区分GPT-3和此插件的回复

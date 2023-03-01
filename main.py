@@ -5,9 +5,6 @@ from pkg.plugin.host import EventContext, PluginHost
 
 import os
 
-# from revChatGPT.V1 import Chatbot
-
-import asyncio
 from EdgeGPT import Chatbot
 
 import plugins.revLibs.pkg.process.revss as revss
@@ -39,7 +36,7 @@ def check_config():
 
 
 # 注册插件
-@register(name="revLibs", description="接入acheong08/ChatGPT等逆向库", version="0.1", author="RockChinQ")
+@register(name="edgegpt", description="接入EdgeGPT的聊天机器人", version="0.1", author="Maynor")
 class HelloPlugin(Plugin):
 
     chatbot: Chatbot = None
@@ -134,7 +131,7 @@ class HelloPlugin(Plugin):
 
 
     def make_reply(self, prompt, **kwargs) -> dict:
-        reply_gen = self.chatbot.ask(prompt, **kwargs)
+        reply_gen = self.chatbot.generate_response(prompt, **kwargs)
         reply = {}
 
         for r in reply_gen:

@@ -1,7 +1,7 @@
 from typing import Tuple
 from plugins.revLibs.pkg.models.interface import RevLibInterface
 
-# from revChatGPT.V1 import Chatbot
+ # from revChatGPT.V1 import Chatbot
 import asyncio
 from EdgeGPT import Chatbot
 
@@ -19,7 +19,8 @@ class RevChatGPTV1(RevLibInterface):
     def __init__(self):
         import revcfg
         self.chatbot = Chatbot(
-            config=revcfg.openai_account
+            cookiePath="C://cookies.json"
+            # config=revcfg.openai_account
         )
 #`get_rev_lib_inst` 方法返回 `chatbot` 对象。
     def get_rev_lib_inst(self):
@@ -36,7 +37,7 @@ class RevChatGPTV1(RevLibInterface):
             if self.chatbot is None:
                 raise Exception("acheong08/ChatGPT.V1 逆向接口未初始化")
             
-            reply_gen = self.chatbot.ask(prompt, **kwargs)
+            reply_gen = self.chatbot.generate_response(prompt, **kwargs)
             already_reply_msg = ""
             reply = {}
 
