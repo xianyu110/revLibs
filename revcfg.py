@@ -1,5 +1,6 @@
 # 使用acheong08/ChatGPT库的方式
 # 目前仅支持V1版本
+import asyncio
 from EdgeGPT import Chatbot
 
 acheong_chatgpt_version = "V1"

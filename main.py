@@ -5,7 +5,10 @@ from pkg.plugin.host import EventContext, PluginHost
 
 import os
 
-from revChatGPT.V1 import Chatbot
+# from revChatGPT.V1 import Chatbot
+
+import asyncio
+from EdgeGPT import Chatbot
 
 import plugins.revLibs.pkg.process.revss as revss
 import plugins.revLibs.pkg.process.procmsg as procmsg

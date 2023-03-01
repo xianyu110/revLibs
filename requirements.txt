@@ -1,2 +1,2 @@
 revChatGPT>=2.2.3
-edgeChatGPT>=3.4.3
+edgeGPT>=3.4.3
