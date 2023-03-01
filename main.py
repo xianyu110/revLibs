@@ -19,7 +19,7 @@ import plugins.revLibs.pkg.process.proccmd as proccmd
 def check_config():
     this_file = __file__
 
-    template_file = os.path.join(os.path.dirname(this_file), "revcfg-template.py")
+    template_file = os.path.join(os.path.dirname(this_file), "revcfg.py")
 
     # 检查revlib.py是否存在
     if not os.path.exists("revcfg.py"):
