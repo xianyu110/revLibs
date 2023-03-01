@@ -1,7 +1,7 @@
 from typing import Tuple
 from plugins.revLibs.pkg.models.interface import RevLibInterface
 
-from revChatGPT.V1 import Chatbot
+# from revChatGPT.V1 import Chatbot
 import asyncio
 from EdgeGPT import Chatbot
 
